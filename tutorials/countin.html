@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>预备拍设置 — BeatForge 教程</title>
-  <meta name="description" content="学习 BeatForge 预备拍功能：中文/英文语音数拍，段落速度过渡技巧。">
+  <title>预备拍与播放 — BeatForge 教程</title>
+  <meta name="description" content="了解 BeatForge 的预备拍（语音数拍）和曲目播放功能。">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -19,46 +19,79 @@
 </header>
 
 <div class="page-header">
-  <h1>预备拍设置</h1>
-  <p>智能语音数拍，准确进入每一段</p>
+  <h1>预备拍与播放</h1>
+  <p>自动语音数拍帮助演奏者准确进入节拍</p>
 </div>
 
 <div class="container content">
 
   <h2>一、什么是预备拍？</h2>
-  <p>预备拍（Count-in）是在正式节拍开始之前的提示拍，通常为 1-4 拍，帮助演奏者提前感知速度和节奏。</p>
-
-  <h2>二、开启预备拍</h2>
-  <ol>
-    <li>在主界面点击顶部的 <strong>预备拍</strong> 开关按钮</li>
-    <li>选择预备拍的小节数（1 小节、2 小节等）</li>
-    <li>选择 <strong>语音语言</strong>：
-      <ul>
-        <li><strong>中文</strong> — 用中文数拍："一、二、三、四"</li>
-        <li><strong>英文</strong> — 用英文数拍："One, Two, Three, Four"</li>
-        <li><strong>关闭</strong> — 仅用节拍音，无语音</li>
-      </ul>
-    </li>
-  </ol>
-  <!-- TODO: 替换为实际截图 -->
-  <div class="img-placeholder">预备拍设置截图（待替换）</div>
-
-  <h2>三、段落之间的过渡</h2>
-  <p>当使用段落编辑器时，BeatForge 会自动在段落之间进行速度过渡处理：</p>
-  <ul>
-    <li><strong>速度差异大时</strong> — 自动生成过渡拍，帮助演奏者适应新速度</li>
-    <li><strong>速度相同时</strong> — 无缝衔接，段落间不中断</li>
-  </ul>
-
-  <h2>四、练习建议</h2>
-  <ul>
-    <li><strong>慢速练习：</strong>将 BPM 设为 60-80，开启 2 小节中文语音预备拍，适合初学者练习节奏感。</li>
-    <li><strong>变速练习：</strong>在段落编辑器中设置不同的速度段落，开启预备拍帮助你适应每一次速度变化。</li>
-    <li><strong>合奏排练：</strong>关闭语音，使用标准节拍音作为乐队合奏的参考拍。</li>
-  </ul>
+  <p>预备拍（Count-In）是在正式节拍开始之前的语音数拍，帮助演奏者提前感知即将到来的速度和节奏。BeatForge 的预备拍<strong>始终为英文语音数拍</strong>（One、Two、Three…），不跟随界面语言切换。</p>
 
   <div class="tip">
-    <strong>💡 提示：</strong>中英文语音可以随时切换。如果你在练习中需要专注数拍，建议开启语音；如果已经熟悉速度，可以关闭语音只用节拍音。
+    <strong>💡 注意：</strong>预备拍是自动触发的，不需要手动设置开关，也没有独立的设置按钮。系统会根据当前 BPM 和拍号自动选择最合适的预备拍模式。
+  </div>
+
+  <h2>二、预备拍的工作方式</h2>
+
+  <h3>根据 BPM 自动适配</h3>
+  <ul>
+    <li><strong>较高速度（BPM ≥ 80）：</strong>
+      <ul>
+        <li>四拍子（4/4、2/4）：先半速唱 4 拍（间隔较长），再正速唱 4 拍 → 共 8 拍</li>
+        <li>三拍子（3/4、6/8）：先半速唱 6 拍（间隔较长），再正速唱 6 拍 → 共 12 拍</li>
+      </ul>
+    </li>
+    <li><strong>较低速度（BPM &lt; 80）：</strong>
+      <ul>
+        <li>四拍子：每个小节正速拍数</li>
+        <li>三拍子：正速 6 拍</li>
+      </ul>
+    </li>
+  </ul>
+
+  <h2>三、段落间的预备拍过渡</h2>
+  <p>在段落编辑器中编排了多段曲目后，播放到段落切换时，BeatForge 会自动：</p>
+  <ul>
+    <li>计算当前段落剩余时间与下一段落预备拍的时长差</li>
+    <li>在合适的时机自动插入下一段落的预备拍语音</li>
+    <li>确保段落之间的过渡自然顺畅</li>
+  </ul>
+
+  <h2>四、播放页面（PlayerScreen）</h2>
+
+  <!-- TODO: 播放页面截图 -->
+  <div class="img-placeholder">播放页面截图（待替换）</div>
+
+  <p>从段落编辑器点击 "一鍵播放全曲" 或从曲目库点击播放后，进入播放页面：</p>
+
+  <ul>
+    <li><strong>段落名称</strong>（大号文字）— 显示当前正在播放的段落名称。多段曲目会显示 "段落 X / Y"</li>
+    <li><strong>播放状态</strong> — 预备拍阶段显示 "COUNT-IN"，播放中显示 "Playing"，停止显示 "Stopped"</li>
+    <li><strong>小节进度</strong> — 显示 "小節 N / M"，即当前是第几小节 / 共多少小节</li>
+    <li><strong>节拍点阵</strong> — 实时高亮当前拍位。注意：播放中点阵不可点击切换状态</li>
+    <li><strong>Play / Stop 按钮</strong>（全宽按钮）— 停止时绿色 "Play"（开始播放），播放时红色 "Stop"（停止）</li>
+    <li><strong>返回編輯</strong>（文字按钮）— 点击停止播放并返回上一页（编辑页或曲目库）</li>
+  </ul>
+
+  <h2>五、曲目库（Library）</h2>
+
+  <!-- TODO: 曲目库截图 -->
+  <div class="img-placeholder">曲目库截图（待替换）</div>
+
+  <p>曲目库用于管理已保存的曲目：</p>
+  <ul>
+    <li><strong>← 返回按钮</strong>（左上角）— 返回上一页</li>
+    <li><strong>曲目列表</strong> — 每条曲目显示名称和总时长</li>
+    <li><strong>▶️ 播放按钮</strong>（绿色）— 播放该曲目，跳转到播放页面</li>
+    <li><strong>⬆️ 导出按钮</strong> — 导出为 M4A 音频文件，导出完成后弹出系统分享菜单</li>
+    <li><strong>🗑️ 删除按钮</strong>（红色）— 从曲目库删除该曲目</li>
+  </ul>
+
+  <p>空状态：如果还没有保存任何曲目，会显示音符图标和 "暫無保存曲目" 提示。</p>
+
+  <div class="tip">
+    <strong>💡 导出提示：</strong>导出为 M4A 格式，导出后可以隔空投送到电脑或导入到其他音频软件中使用。
   </div>
 
   <div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;">

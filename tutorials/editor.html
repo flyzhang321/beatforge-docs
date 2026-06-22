@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>段落编辑器 — BeatForge 教程</title>
-  <meta name="description" content="学习 BeatForge 段落编辑器：多段落编排、速度变化、创建复杂曲目结构。">
+  <meta name="description" content="学习 BeatForge 段落编辑器的每个按钮功能和使用方法。">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
@@ -20,61 +20,81 @@
 
 <div class="page-header">
   <h1>段落编辑器</h1>
-  <p>编排多变速曲目，突破传统节拍器的限制</p>
+  <p>编排多段落变速曲目，每个段落的 BPM、拍号均可独立设置</p>
 </div>
 
 <div class="container content">
 
-  <h2>一、什么是段落编辑器？</h2>
-  <p>段落编辑器是 BeatForge 的核心高级功能，让你可以将一首曲目拆分成多个段落，每个段落可以独立设置 BPM、拍号和小节数。这对编排变速复杂的曲目来说非常有用。</p>
-  <div class="tip">
-    <strong>💡 适用场景：</strong>比如一首歌有前奏（慢板）、主歌、副歌（快板）、尾声（渐慢），你可以分别设置每个段落的参数，然后连续播放。
-  </div>
+  <!-- TODO: 编辑器截图 -->
+  <div class="img-placeholder">段落编辑器全貌截图（待替换）</div>
 
-  <h2>二、进入编辑器</h2>
-  <p>在底部导航栏点击 <strong>"编辑"</strong> 标签，进入段落编辑器页面。</p>
-  <!-- TODO: 替换为实际截图 -->
-  <div class="img-placeholder">段落编辑器入口截图（待替换）</div>
-
-  <h2>三、添加段落</h2>
-  <ol>
-    <li>点击 <strong>"添加段落"</strong> 按钮</li>
-    <li>设置该段落的 <strong>BPM</strong>（速度）</li>
-    <li>选择 <strong>拍号</strong>（如 4/4、3/4）</li>
-    <li>输入 <strong>小节数</strong>（该段落重复多少节）</li>
-    <li>输入 <strong>段落名称</strong>（如"前奏"、"副歌"）</li>
-  </ol>
-  <div class="tip">
-    <strong>💡 提示：</strong>段落名称帮助你在排练时快速定位。名称不会影响播放效果。
-  </div>
-
-  <h2>四、编辑与排序</h2>
+  <h2>一、页面概览</h2>
+  <p>段落编辑器的页面非常简洁，从上到下分为三部分：</p>
   <ul>
-    <li><strong>编辑段落：</strong>点击已有段落，修改其 BPM、拍号或小节数。</li>
-    <li><strong>调整顺序：</strong>长按段落右侧的拖拽手柄，上下拖动调整播放顺序。</li>
-    <li><strong>删除段落：</strong>向左滑动段落，点击删除按钮。</li>
+    <li><strong>顶部导航栏</strong> — 返回按钮 + 标题</li>
+    <li><strong>中间段落列表</strong> — 每个段落为一个独立的编辑卡片（SegmentCard）</li>
+    <li><strong>底部操作栏</strong> — "一鍵播放全曲" 和 "儲存" 两个按钮</li>
   </ul>
 
-  <!-- TODO: 替换为实际截图 -->
-  <div class="img-placeholder">段落编辑界面截图（待替换）</div>
-
-  <h2>五、预览与保存</h2>
-  <ol>
-    <li>编辑完成后，点击 <strong>"预览"</strong> 从头播放所有段落</li>
-    <li>段落之间的速度过渡会自动平滑处理</li>
-    <li>确认满意后，点击 <strong>"保存到曲目库"</strong></li>
-  </ol>
-
-  <h2>六、实用技巧</h2>
+  <h2>二、导航栏</h2>
   <ul>
-    <li><strong>渐慢效果：</strong>在段落末尾添加一个稍慢 BPM 的短段落，模拟渐慢收尾。</li>
-    <li><strong>桥段过渡：</strong>在两个快板段落之间加入一个中速段落作为过渡，让曲目更流畅。</li>
-    <li><strong>反复练习：</strong>对一个困难段落设置较多小节数，集中练习特定片段。</li>
+    <li><strong>← 返回按钮</strong>（左上角）— 点击返回节拍器主界面</li>
+    <li><strong>标题 "段落编辑器"</strong> — 跟随界面语言切换</li>
   </ul>
+
+  <h2>三、段落卡片详解</h2>
+  <p>每个段落在一个卡片中编辑，可添加任意多个段落（最少保留 1 个）：</p>
+
+  <!-- TODO: 段落卡片截图 -->
+  <div class="img-placeholder">段落卡片截图（待替换）</div>
+
+  <h3>标题行</h3>
+  <ul>
+    <li><strong>段落名称</strong>（可编辑文本框）— 默认显示 "段落 1"、"段落 2"… 你可以修改为"前奏"、"副歌"等有意义的名称</li>
+    <li><strong>🗑️ 删除按钮</strong>（红色垃圾桶图标，右上角）— 删除该段落。段落数只剩 1 个时，删除按钮隐藏</li>
+  </ul>
+
+  <h3>参数设置</h3>
+  <ul>
+    <li><strong>BPM 输入框</strong> — 点按后输入数字，范围 20-380。输入超过范围时会有红色提示</li>
+    <li><strong>小節（Bars）输入框</strong> — 设置该段落重复几个小节</li>
+    <li><strong>拍號（Time Sig）</strong> — 点击选择拍号，同主界面的 8 种拍号</li>
+    <li><strong>音符（Note）</strong> — 点击选择音符细分模式，同主界面的 6 种细分</li>
+  </ul>
+
+  <h3>节拍点阵</h3>
+  <p>每个段落下方都有一个节拍点阵，操作方式和主界面一样：</p>
+  <ul>
+    <li>🟢 绿色 = 重音拍</li>
+    <li>⚪ 灰色 = 普通拍</li>
+    <li>⊙ 半透明 = 静音拍</li>
+    <li>点击切换状态</li>
+  </ul>
+
+  <h2>四、添加新段落</h2>
+  <p>段落列表最底部有一个 <strong>虚线边框的 "添加新段落" 按钮</strong>，点击后会自动复制最后一个段落的参数，创建新段落。</p>
+
+  <div class="tip">
+    <strong>💡 用法示例：</strong>创建一个"前奏"段落（BPM=80，4/4，4 小节），再添加一个"副歌"段落（BPM=140，4/4，8 小节），播放时会按顺序先慢后快。
+  </div>
+
+  <h2>五、底部按钮</h2>
+  <ul>
+    <li><strong>🎵 一鍵播放全曲（绿色按钮）</strong> — 从头播放所有段落，进入播放页面</li>
+    <li><strong>💾 儲存（按钮）</strong> — 弹出命名对话框，输入曲目名称后保存到曲目库</li>
+  </ul>
+
+  <h2>六、保存曲目</h2>
+  <ol>
+    <li>点击底部 "儲存" 按钮</li>
+    <li>弹出半透明对话框，输入曲目名称（如不输入默认为 "BeatForge Track"）</li>
+    <li>点击 "儲存" 确认，自动跳转到曲目库</li>
+    <li>点击 "取消" 或点遮罩区域可关闭对话框</li>
+  </ol>
 
   <div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;">
-    <a href="basic.html">← 上一篇：基础操作</a>
-    <a href="countin.html">下一篇：预备拍设置 →</a>
+    <a href="basic.html">← 上一篇：主界面</a>
+    <a href="countin.html">下一篇：预备拍 →</a>
   </div>
 
 </div>
