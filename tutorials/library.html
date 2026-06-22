@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>曲目库与导出 — BeatForge 教程</title>
+  <meta name="description" content="学习 BeatForge 曲目库的使用方法：保存曲目、播放、导出 M4A 音频。">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <a href="../index.html" class="logo">BeatForge <span>节拍器</span></a>
+    <a href="basic.html">使用教程</a>
+    <a href="../faq.html">常见问题</a>
+    <a href="../privacy.html">隐私政策</a>
+  </nav>
+</header>
+
+<div class="page-header">
+  <h1>曲目库与导出</h1>
+  <p>管理保存的曲目，播放或导出为音频文件</p>
+</div>
+
+<div class="container content">
+
+  <img src="../images/screenshot-library.png" alt="曲目库页面">
+
+  <h2>一、页面概览</h2>
+  <ul>
+    <li><strong>← 返回按钮</strong>（左上角）— 返回上一页（首页或编辑器）</li>
+    <li><strong>标题 "我的曲目庫" / "My Library"</strong> — 跟随界面语言切换</li>
+  </ul>
+
+  <h2>二、曲目列表</h2>
+  <p>已保存的曲目会以列表形式展示，每条曲目包含以下操作：</p>
+  <ul>
+    <li><strong>曲目名称</strong>（粗体文字）— 保存时设定的名称</li>
+    <li><strong>曲目时长</strong> — 显示 mm:ss 格式的总时长</li>
+    <li><strong>▶️ 播放按钮</strong>（绿色 play 图标）— 点击播放该曲目，进入播放页面</li>
+    <li><strong>⬆️ 导出按钮</strong>（分享图标）— 点击开始导出，完成后弹出系统分享菜单</li>
+    <li><strong>🗑️ 删除按钮</strong>（红色垃圾桶图标）— 点击删除该曲目（不可恢复）</li>
+  </ul>
+
+  <h2>三、空状态</h2>
+  <p>如果还没有保存任何曲目，页面会显示音符图标和 "暫無保存曲目" / "No saved tracks" 的提示。</p>
+
+  <h2>四、播放曲目</h2>
+  <p>点击曲目右侧的 ▶️ 播放按钮，会自动跳转到播放页面：</p>
+  <ul>
+    <li>显示当前段落的名称、播放状态、小节进度</li>
+    <li>节拍点阵实时高亮当前拍位</li>
+    <li>段落之间自动过渡和预备拍</li>
+    <li>播放结束后点击 "返回編輯" 或 "Stop" 停止播放</li>
+  </ul>
+
+  <h2>五、导出音频</h2>
+  <ol>
+    <li>点击曲目右侧的 ⬆️ 导出按钮</li>
+    <li>应用会生成 WAV 数据并自动转码为 <strong>M4A 格式</strong></li>
+    <li>导出过程中会显示 "正在导出…" 的遮罩层，请勿操作</li>
+    <li>导出完成后自动弹出系统分享菜单，你可以：
+      <ul>
+        <li>保存到文件</li>
+        <li>隔空投送到电脑</li>
+        <li>通过微信、邮件等方式分享</li>
+      </ul>
+    </li>
+  </ol>
+
+  <div class="tip">
+    <strong>💡 提示：</strong>导出的 M4A 文件可以直接导入到 DAW（如 Logic Pro、GarageBand）或其他音频编辑软件中使用。
+  </div>
+
+  <h2>六、如何保存曲目到曲目库？</h2>
+  <p>在段落编辑器中编排好段落参数后：</p>
+  <ol>
+    <li>点击底部的 "儲存" 按钮</li>
+    <li>输入曲目名称（如不输入默认为 "BeatForge Track"）</li>
+    <li>点击 "儲存" 确认</li>
+    <li>自动跳转到曲目库，新曲目出现在列表中</li>
+  </ol>
+
+  <div style="margin-top:40px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;">
+    <a href="countin.html">← 上一篇：预备拍与播放</a>
+  </div>
+
+</div>
+
+<footer>
+  <div class="links">
+    <a href="../index.html">首页</a>
+    <a href="basic.html">使用教程</a>
+    <a href="../faq.html">常见问题</a>
+    <a href="../privacy.html">隐私政策</a>
+  </div>
+  <p>© 2026 flyzhang321. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
