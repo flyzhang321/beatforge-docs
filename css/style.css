@@ -1,0 +1,127 @@
+/* ===== BeatForge 官网样式 ===== */
+:root {
+  --primary: #008080;
+  --primary-dark: #006060;
+  --primary-light: #00a0a0;
+  --bg: #f9f7f4;
+  --bg-card: #ffffff;
+  --text: #1a1a1a;
+  --text-light: #666;
+  --border: #e5e5e5;
+  --shadow: 0 2px 12px rgba(0,0,0,0.06);
+  --radius: 12px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+
+a { color: var(--primary); text-decoration: none; }
+a:hover { color: var(--primary-dark); }
+
+/* ===== 顶部导航 ===== */
+header {
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100;
+}
+nav {
+  max-width: 960px; margin: 0 auto; padding: 0 20px;
+  display: flex; align-items: center; height: 56px; gap: 24px;
+}
+nav .logo { font-weight: 700; font-size: 18px; color: var(--primary); }
+nav .logo span { font-weight: 300; color: var(--text-light); }
+nav a { font-size: 14px; color: var(--text); }
+nav a:hover { color: var(--primary); }
+
+/* ===== 主容器 ===== */
+.container { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+/* ===== 首页 Hero ===== */
+.hero {
+  text-align: center; padding: 80px 20px 60px;
+  background: linear-gradient(135deg, #008080 0%, #004d4d 100%);
+  color: white; border-radius: 0 0 24px 24px;
+}
+.hero h1 { font-size: 40px; font-weight: 700; margin-bottom: 12px; }
+.hero p { font-size: 18px; opacity: 0.9; margin-bottom: 32px; }
+.hero .badge {
+  display: inline-block; background: rgba(255,255,255,0.2);
+  padding: 8px 20px; border-radius: 20px; font-size: 14px;
+}
+.btn-download {
+  display: inline-block; background: white; color: var(--primary);
+  padding: 14px 40px; border-radius: 28px; font-size: 18px; font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn-download:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.15); color: var(--primary-dark); }
+
+/* ===== 功能区域 ===== */
+.section { padding: 60px 0; }
+.section-title { font-size: 28px; text-align: center; margin-bottom: 40px; color: var(--primary); }
+
+.features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+.feature-card {
+  background: var(--bg-card); border-radius: var(--radius); padding: 28px;
+  box-shadow: var(--shadow); transition: transform 0.2s;
+}
+.feature-card:hover { transform: translateY(-4px); }
+.feature-card .icon { font-size: 32px; margin-bottom: 12px; }
+.feature-card h3 { font-size: 18px; margin-bottom: 8px; }
+.feature-card p { font-size: 14px; color: var(--text-light); }
+
+/* ===== 截图区 ===== */
+.screenshots { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.screenshot-card {
+  background: var(--bg-card); border-radius: var(--radius); overflow: hidden;
+  box-shadow: var(--shadow); text-align: center; padding-bottom: 12px;
+}
+.screenshot-card img { width: 100%; display: block; }
+.screenshot-card .label { font-size: 13px; color: var(--text-light); padding: 8px 12px 0; }
+
+/* ===== 内容页通用 ===== */
+.page-header {
+  padding: 40px 20px; text-align: center; background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+.page-header h1 { font-size: 28px; margin-bottom: 8px; }
+.page-header p { color: var(--text-light); font-size: 15px; }
+
+.content { padding: 40px 0 80px; }
+.content h2 { font-size: 22px; color: var(--primary); margin: 32px 0 16px; padding-bottom: 8px; border-bottom: 2px solid var(--primary); }
+.content h3 { font-size: 18px; margin: 24px 0 12px; }
+.content p { margin-bottom: 16px; }
+.content ul, .content ol { margin: 0 0 16px 20px; }
+.content li { margin-bottom: 8px; }
+.content .tip { background: #e8f4f4; padding: 16px 20px; border-radius: 8px; margin: 16px 0; font-size: 14px; }
+.content .tip strong { color: var(--primary); }
+.content img { max-width: 100%; border-radius: 8px; box-shadow: var(--shadow); margin: 16px 0; }
+
+/* ===== FAQ ===== */
+.faq-item { background: var(--bg-card); border-radius: var(--radius); padding: 20px 24px; margin-bottom: 12px; box-shadow: var(--shadow); }
+.faq-item h3 { color: var(--primary); font-size: 16px; margin-bottom: 8px; cursor: pointer; }
+.faq-item p { font-size: 14px; color: var(--text-light); }
+
+/* ===== 页脚 ===== */
+footer { background: var(--text); color: rgba(255,255,255,0.7); padding: 40px 20px; text-align: center; font-size: 13px; }
+footer a { color: rgba(255,255,255,0.9); }
+footer a:hover { color: white; }
+footer .links { margin-bottom: 12px; }
+footer .links a { margin: 0 12px; }
+
+/* ===== 图片占位 ===== */
+.img-placeholder {
+  background: #e8e8e8; border-radius: 8px; display: flex;
+  align-items: center; justify-content: center;
+  color: #999; font-size: 14px; min-height: 200px;
+  margin: 16px 0; border: 2px dashed #ccc;
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 640px) {
+  .hero h1 { font-size: 28px; }
+  .hero p { font-size: 16px; }
+  .hero { padding: 60px 16px 40px; }
+  nav { gap: 12px; }
+  nav a { font-size: 13px; }
+  .section-title { font-size: 22px; }
+}
